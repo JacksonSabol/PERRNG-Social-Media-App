@@ -1,0 +1,18 @@
+{
+  "name": "perrng-social-media-app",
+  "version": "1.0.0",
+  "description": "Basic Social Media App - learning Relay Modern with GraphQL, React, Node, Express, and PostgreSQL",
+  "main": "server/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JacksonSabol/PERRNG-Social-Media-App.git"
+  },
+  "author": "Jackson Sabol",
+  "bugs": {
+    "url": "https://github.com/JacksonSabol/PERRNG-Social-Media-App/issues"
+  },
+  "homepage": "https://github.com/JacksonSabol/PERRNG-Social-Media-App#readme"
+}
