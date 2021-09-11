@@ -13,6 +13,10 @@ CREATE ROLE perrnguser WITH
 GRANT postgres TO perrnguser WITH ADMIN OPTION;
 
 -- Drops the DB if it exists currently --
-DROP DATABASE IF EXISTS perrng-app;
+DROP DATABASE IF EXISTS "perrng-app";
 -- Creates the DB --
-CREATE DATABASE perrng-app;
+CREATE DATABASE "perrng-app"
+    WITH 
+    OWNER = perrnguser
+    ENCODING = 'UTF8'
+    CONNECTION LIMIT = -1;
