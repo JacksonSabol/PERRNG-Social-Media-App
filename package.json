@@ -25,11 +25,13 @@
   },
   "homepage": "https://github.com/JacksonSabol/PERRNG-Social-Media-App#readme",
   "dependencies": {
+    "apollo-server": "^3.3.0",
     "bcrypt": "^5.0.1",
     "bunyan": "^1.8.15",
     "compression": "^1.7.4",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
+    "graphql": "^15.5.3",
     "helmet": "^4.6.0",
     "http-errors": "^1.8.0",
     "if-env": "^1.0.4",
