@@ -31,7 +31,11 @@ module.exports = (sequelize, DataTypes) => {
         freezeTableName: true,
     });
     User.associate = (models) => {
-        User.hasMany(models.Post);
+        User.hasMany(models.Post, {
+            onDelete: 'SET NULL',
+            // Default for Sequelize onUpdate is already CASCADE
+            // onUpdate: 'CASCADE',
+        });
     };
     return User;
 };

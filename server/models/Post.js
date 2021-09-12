@@ -12,8 +12,8 @@ module.exports = (sequelize, DataTypes) => {
         },
         username: {
             type: DataTypes.STRING(200),
-            allowNull: false,
-            onDelete: 'set null',
+            allowNull: true,
+            onDelete: 'SET NULL',
             references: {
                 model: 'User',
                 key: 'username',
