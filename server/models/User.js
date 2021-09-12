@@ -12,6 +12,7 @@ module.exports = (sequelize, DataTypes) => {
         username: {
             type: DataTypes.STRING(200),
             allowNull: false,
+            unique: true,
         },
         email: {
             type: DataTypes.STRING(100),
@@ -29,8 +30,8 @@ module.exports = (sequelize, DataTypes) => {
     }, {
         freezeTableName: true,
     });
-    // User.associate = (models) => {
-    //     User.hasMany(models.Post);
-    // };
+    User.associate = (models) => {
+        User.hasMany(models.Post);
+    };
     return User;
 };
