@@ -36,6 +36,11 @@ module.exports = (sequelize, DataTypes) => {
             // Default for Sequelize onUpdate is already CASCADE
             // onUpdate: 'CASCADE',
         });
+        User.hasMany(models.Comment, {
+            onDelete: 'SET NULL',
+            // Default for Sequelize onUpdate is already CASCADE
+            // onUpdate: 'CASCADE',
+        });
     };
     return User;
 };

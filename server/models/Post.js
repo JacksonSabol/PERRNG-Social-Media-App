@@ -38,8 +38,12 @@ module.exports = (sequelize, DataTypes) => {
     // Post.associate = (models) => {
     //     Post.hasMany(models.Like);
     // };
-    // Post.associate = (models) => {
-    //     Post.hasMany(models.Comment);
-    // };
+    Post.associate = (models) => {
+        Post.hasMany(models.Comment, {
+            onDelete: 'CASCADE',
+            // Default for Sequelize onUpdate is already CASCADE
+            // onUpdate: 'CASCADE',
+        });
+    };
     return Post;
 };
