@@ -35,9 +35,13 @@ module.exports = (sequelize, DataTypes) => {
     Post.associate = (models) => {
         Post.belongsTo(models.User);
     };
-    // Post.associate = (models) => {
-    //     Post.hasMany(models.Like);
-    // };
+    Post.associate = (models) => {
+        Post.hasMany(models.Like, {
+            onDelete: 'CASCADE',
+            // Default for Sequelize onUpdate is already CASCADE
+            // onUpdate: 'CASCADE',
+        });
+    };
     Post.associate = (models) => {
         Post.hasMany(models.Comment, {
             onDelete: 'CASCADE',
